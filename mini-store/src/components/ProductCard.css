@@ -1,0 +1,116 @@
+/* CARD CONTAINER */
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.25s ease;
+  cursor: default;
+  position: relative;
+  height: 100%; /* ensures equal card height + button stays down */
+}
+
+/* HOVER FEEL */
+.product-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* HEADER */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* PRODUCT NAME */
+.product-name {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* CATEGORY BADGE */
+.product-category {
+  background: #eef1ff;
+  color: #4a4fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* PRICE */
+.price {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111;
+  margin: 6px 0;
+}
+
+/* STOCK STATES */
+.stock {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.stock.in {
+  color: #2da44e;
+}
+
+.stock.out {
+  color: #d93025;
+}
+
+/* ADD BUTTON — locked to bottom */
+.add-btn {
+  margin-top: auto;    /* pushes button to bottom */
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* BUTTON HOVER */
+.add-btn:hover {
+  background: linear-gradient(to right, #000, #222);
+  transform: translateY(-1px);
+}
+
+/* DISABLED STATE */
+.add-btn:disabled {
+  background: #c9c9c9;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.7;
+}
+
+/* NICE FOCUS STYLING */
+.add-btn:focus,
+.search-input:focus,
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(70, 97, 255, 0.4);
+}
+
+/* SUBTLE CARD SEPARATOR FOR SMALL DETAILS */
+.product-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.product-card:hover .product-name {
+  text-decoration: underline;
+}

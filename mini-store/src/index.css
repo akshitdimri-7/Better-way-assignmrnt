@@ -1,0 +1,123 @@
+/* =========
+ Global Reset
+========= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* =========
+ Layout Container
+========= */
+
+/* Allow full width, but keep padding */
+.app-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 24px 32px;
+}
+
+/* Optional wrapper if you want soft page centering for some sections */
+.page-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========
+ Header
+========= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.cart-indicator {
+  font-size: 15px;
+}
+
+.cart-indicator strong {
+  font-size: 16px;
+}
+
+/* =========
+ Page Layout
+========= */
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+/* Cart Panel */
+
+.cart-section {
+  background: white;
+  border: 1px solid #e2e2e2;
+  padding: 14px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* =========
+ Reusable Elements
+========= */
+
+input,
+select,
+button {
+  font-family: inherit;
+}
+
+input,
+select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #444;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* =========
+ Responsive
+========= */
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
